@@ -7,97 +7,1189 @@
     <title>Für Katja</title>
     <style>
         body {
-            font-family: "Times New Roman", serif;
-            background-color: #1a1a1d;
-            color: #d1d1d6;
-            margin: 0px;
+            background-color: #000;
+
+            overflow-x: hidden;
+        }
+
+        @font-face {
+            font-family: 'ESL Legend';
+            src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.eot);
+            src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.eot#iefix) format("embedded-opentype"),
+                url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.woff2) format("woff2"),
+                url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.woff) format("woff"),
+                url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.ttf) format("truetype"),
+                url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Light.svg#eicon) format("svg");
+            font-style: normal;
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: 'ESL Legend';
+            src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.eot);
+            src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.eot#iefix) format("embedded-opentype"),
+                url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.woff2) format("woff2"),
+                url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.woff) format("woff"),
+                url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.ttf) format("truetype"),
+                url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Regular.svg#eicon) format("svg");
+            font-style: normal;
+            font-weight: normal;
+        }
+
+        @font-face {
+            font-family: 'ESL Legend';
+            src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.eot);
+            src: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.eot#iefix) format("embedded-opentype"),
+                url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.woff2) format("woff2"),
+                url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.woff) format("woff"),
+                url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.ttf) format("truetype"),
+                url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/fonts/legend/ESLLegend-Bold.svg#eicon) format("svg");
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .ag-format-container {
+            width: 1160px;
+            margin: 0 auto;
+
+            position: relative;
+        }
+
+        .ag-timeline-block {
+            padding: 300px 0;
+        }
+
+        .ag-timeline_title-box {
+            padding: 0 0 30px;
+
             text-align: center;
         }
 
-        .container {
-            overflow: auto; /* to contain floated children */
+        .ag-timeline_tagline {
+            font-size: 40px;
+            color: rgb(84, 89, 95);
         }
 
-        .left-div, .right-div {
-            float: left;
-            width: 50%; /* you can adjust as required */
-            box-sizing: border-box;
-            padding: 0px;
+        .ag-timeline_title {
+            background-image: url(https://raw.githubusercontent.com/SochavaAG/example-mycode/master/pens/timeline/images/bg.jpg);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+
+            background-size: cover;
+            -webkit-background-clip: text;
+            background-clip: text;
+            text-fill-color: transparent;
+            color: rgb(209, 31, 186);
+
+            font-size: 80px;
         }
 
-        h1 {
-            color: #b5739d;
+        .ag-timeline_item {
+            margin: 0 0 50px;
+
+            position: relative;
         }
 
-        p {
-            font-size: 22px;
+        .ag-timeline_item:nth-child(2n) {
+            text-align: right;
         }
 
-        .bridge {
-            color: #8d7f8b;
+        .ag-timeline {
+            display: inline-block;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+
+            position: relative;
         }
 
-        .piano {
-            color: #7f8c8d;
+        .ag-timeline_line {
+            width: 2px;
+            background-color: #393935;
+
+            position: absolute;
+            top: 2px;
+            left: 50%;
+            bottom: 0;
+
+            overflow: hidden;
+
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
         }
 
-        .books {
-            color: #f39c12;
+        .ag-timeline_line-progress {
+            width: 100%;
+            height: 20%;
+            background-color: #FF0;
+        }
+
+        .ag-timeline-card_box {
+            padding: 0 0 20px 50%;
+        }
+
+        .ag-timeline_item:nth-child(2n) .ag-timeline-card_box {
+            padding: 0 50% 20px 0;
+        }
+
+        .ag-timeline-card_point-box {
+            display: inline-block;
+            margin: 0 14px 0 -28px;
+        }
+
+        .ag-timeline_item:nth-child(2n) .ag-timeline-card_point-box {
+            margin: 0 -28px 0 14px;
+        }
+
+        .ag-timeline-card_point {
+            height: 50px;
+            line-height: 50px;
+            width: 50px;
+            border: 3px solid #FF0;
+            background-color: #1d1d1b;
+
+            text-align: center;
+            font-family: 'ESL Legend', sans-serif;
+            font-size: 20px;
+            color: #FFF;
+
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+        }
+
+        .js-ag-active .ag-timeline-card_point {
+            color: #1d1d1b;
+            background-color: #FF0;
+        }
+
+        .ag-timeline-card_meta-box {
+            display: inline-block;
+        }
+
+        .ag-timeline-card_meta {
+            margin: 10px 0 0;
+
+            font-family: 'ESL Legend', sans-serif;
+            font-weight: bold;
+            font-size: 28px;
+            color: #FF0;
+        }
+
+        .ag-timeline-card_item {
+            display: inline-block;
+            width: 45%;
+            margin: -77px 0 0;
+            background-color: #282828;
+
+            opacity: 0;
+
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            border-radius: 6px;
+
+            -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
+            -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
+            -o-box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, .5);
+
+            -webkit-transition: -webkit-transform .5s, opacity .5s;
+            -moz-transition: -moz-transform .5s, opacity .5s;
+            -o-transition: -o-transform .5s, opacity .5s;
+            transition: transform .5s, opacity .5s;
+
+            position: relative;
+        }
+
+        .ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item {
+            -webkit-transform: translateX(-200%);
+            -moz-transform: translateX(-200%);
+            -ms-transform: translateX(-200%);
+            -o-transform: translateX(-200%);
+            transform: translateX(-200%);
+        }
+
+        .ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
+            -webkit-transform: translateX(200%);
+            -moz-transform: translateX(200%);
+            -ms-transform: translateX(200%);
+            -o-transform: translateX(200%);
+            transform: translateX(200%);
+        }
+
+        .js-ag-active.ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item,
+        .js-ag-active.ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
+            opacity: 1;
+
+            -webkit-transform: translateX(0);
+            -moz-transform: translateX(0);
+            -ms-transform: translateX(0);
+            -o-transform: translateX(0);
+            transform: translateX(0);
+        }
+
+        .ag-timeline-card_arrow {
+            height: 18px;
+            width: 18px;
+            margin-top: 20px;
+            background-color: #282828;
+
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+        .ag-timeline_item:nth-child(2n+1) .ag-timeline-card_arrow {
+            margin-left: calc(-18px / 2);
+            margin-right: calc(-18px / 2);
+        }
+
+        .ag-timeline_item:nth-child(2n) .ag-timeline-card_arrow {
+            margin-left: -10px;
+
+            right: auto;
+            left: 0;
+        }
+
+        .ag-timeline-card_img {
+            width: 100%;
+        }
+
+        .ag-timeline-card_info {
+            padding: 20px 30px;
+        }
+
+        .ag-timeline-card_title {
+            display: none;
+            margin: 10px 0 0;
+
+            font-family: 'ESL Legend', sans-serif;
+            font-weight: bold;
+            font-size: 28px;
+            color: #FF0;
+        }
+
+        .ag-timeline-card_desc {
+            line-height: 1.45;
+
+            font-size: 16px;
+            color: #FFF;
+        }
+
+
+        @media only screen and (max-width: 979px) {
+            .ag-timeline_line {
+                left: 30px;
+            }
+
+            .ag-timeline_item:nth-child(2n) {
+                text-align: left;
+            }
+
+            .ag-timeline-card_box,
+            .ag-timeline_item:nth-child(2n) .ag-timeline-card_box {
+                padding: 0 0 20px;
+            }
+
+            .ag-timeline-card_meta-box {
+                display: none;
+            }
+
+            .ag-timeline-card_point-box,
+            .ag-timeline_item:nth-child(2n) .ag-timeline-card_point-box {
+                margin: 0 0 0 8px;
+            }
+
+            .ag-timeline-card_point {
+                height: 40px;
+                line-height: 40px;
+                width: 40px;
+            }
+
+            .ag-timeline-card_item {
+                width: auto;
+                margin: -65px 0 0 75px
+            }
+
+            .ag-timeline_item:nth-child(2n+1) .ag-timeline-card_item,
+            .ag-timeline_item:nth-child(2n) .ag-timeline-card_item {
+                -webkit-transform: translateX(200%);
+                -moz-transform: translateX(200%);
+                -ms-transform: translateX(200%);
+                -o-transform: translateX(200%);
+                transform: translateX(200%);
+            }
+
+            .ag-timeline_item:nth-child(2n+1) .ag-timeline-card_arrow {
+                right: auto;
+                left: 0;
+            }
+
+            .ag-timeline-card_title {
+                display: block;
+            }
+
+            .ag-timeline-card_arrow {
+                margin-top: 12px;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            .ag-format-container {
+                width: 96%;
+            }
+
+            .ag-timeline-card_img {
+                height: auto;
+                width: auto;
+            }
+        }
+
+        @media only screen and (max-width: 639px) {
+            .ag-timeline_title {
+                font-size: 60px;
+            }
+
+            .ag-timeline-card_info {
+                padding: 10px 15px;
+            }
+
+            .ag-timeline-card_desc {
+                font-size: 14px;
+            }
+        }
+
+        @media only screen and (max-width: 479px) {}
+
+        @media (min-width: 768px) and (max-width: 979px) {
+            .ag-format-container {
+                width: 750px;
+            }
+
+        }
+
+        @media (min-width: 980px) and (max-width: 1161px) {
+            .ag-format-container {
+                width: 960px;
+            }
+
+        }
+
+        img {
+            object-fit: cover;
+        }
+
+        #playpause {
+            display: inline;
+            vertical-align: middle;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        #playpause:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <div class="left-div">
-            <h1>七夕，星空下的约定</h1>
-            <h2 class="bridge">高山流水</h2>
-            <p>
-                繁星闪烁，回忆起古老传说。<br>
-                牛郎织女，谱写着永恒诗歌。<br>
-                知己难寻，相遇在偶然时刻。<br>
-                浩瀚银河，见证那永恒你我。<br>
-            </p>
-            <h2 class="piano">琴心剑胆</h2>
-            <p>
-                琴声悠扬，星空下演奏乐曲。<br>
-                余音绕梁，旋律中最美是你。<br>
-                红袖添香，故事里我愿羁旅。<br>
-                荡气回肠，天地间永为伴侣。<br>
-            </p>
-            <h2 class="books">星空之约</h2>
-            <p>
-                千山万水，怎抵挡衷心情意。<br>
-                时空相隔，难动摇我心已许。<br>
-                佳节七夕，赤子心跨越万里。<br>
-                美梦成真，终相会牛郎织女！<br>
-            </p>
+    <div class="ag-timeline-block">
+        <div class="ag-timeline_title-box">
+            <div class="ag-timeline_tagline">Chronik der Liebe</div>
+            <div>
+                <div style="display: inline; vertical-align: middle;" class="ag-timeline_title">时光恋曲</div>
+                <button id="playpause" onClick="playPause()">
+                    <img style="width: 80px; height: 80px;" src="images/play.svg">
+                    <audio src="audios/onward.ogg" autoplay></audio>
+                </button>
+            </div>
         </div>
-        <div class="right-div">
-            <h1>A Promise Under the Starry Sky</h1>
-            <h2 class="bridge">高山流水</h2>
-            <p>
-                Stars above twinkle and glow, recalling tales from long ago. <br>
-                NiuLang and ZhiNü, their eternal song we know. <br>
-                Souls mates are rare, found in a moment's spree, <br>
-                The vast Milky Way, witnesses our eternity. <br>
-            </p>
-            <h2 class="piano">琴心剑胆</h2>
-            <p>
-                Piano notes rise high, under stars they serenely fly.  <br>
-                Echoes dance around, in the melody, you're the most profound.  <br>
-                Red sleeves scent the tale, with you, I'd journey without fail.  <br>
-                Stirring deep emotion, through time and space, an endless devotion. <br>
-            </p>
-            <h2 class="books">星空之约</h2>
-            <p>
-                Through mountains vast and rivers wide, true feelings can't be denied.  <br>
-                Time and space may part, but vows of my heart never depart.  <br>
-                On this Qixi fest, with an earnest heart, I travel the quest.  <br>
-                Dreams do come through, as NiuLang and ZhiNü finally rendezvous! <br>
-            </p>
-        </div>
+        <section class="ag-section">
+            <div class="ag-format-container">
+                <div class="js-timeline ag-timeline">
+                    <div class="js-timeline_line ag-timeline_line">
+                        <div class="js-timeline_line-progress ag-timeline_line-progress"></div>
+                    </div>
+                    <div class="ag-timeline_list">
+                        <div class="js-timeline_item ag-timeline_item">
+                            <div class="ag-timeline-card_box">
+                                <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                    <div class="ag-timeline-card_point">14.08</div>
+                                </div>
+                                <div class="ag-timeline-card_meta-box">
+                                    <div class="ag-timeline-card_meta">初见 Acquaintance</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ag-timeline-card_item">
+                                <div class="ag-timeline-card_inner">
+                                    <div class="ag-timeline-card_img-box">
+                                        <img src="images/1.jpg" class="ag-timeline-card_img" width="640" height="360" />
+                                    </div>
+                                    <div class="ag-timeline-card_info">
+                                        <div class="ag-timeline-card_title">14.08</div>
+                                        <div class="ag-timeline-card_desc">
+                                            Can never forget that faithful day,<br />
+                                            I clicked on your profile, you are so lovely!<br />
+                                            We chatted for hours, I haven never been so happy.<br />
+                                            You look, your voice, let alone your personality.<br />
+                                            You asked me about romantic Harbin, my city.<br />
+                                            How the universe brought us together, is still a mystery.<br />
+                                            So grateful to have met you, I never felt so lucky!<br />
+                                            <br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_arrow"></div>
+                            </div>
+                        </div>
+
+                        <div class="js-timeline_item ag-timeline_item">
+                            <div class="ag-timeline-card_box">
+                                <div class="ag-timeline-card_meta-box">
+                                    <div class="ag-timeline-card_meta">知音 Connection</div>
+                                </div>
+                                <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                    <div class="ag-timeline-card_point">15.08</div>
+                                </div>
+                            </div>
+                            <div class="ag-timeline-card_item">
+                                <div class="ag-timeline-card_inner">
+                                    <div class="ag-timeline-card_img-box">
+                                        <img src="images/2.jpg" class="ag-timeline-card_img" width="640" height="360" alt="" />
+                                    </div>
+                                    <div class="ag-timeline-card_info">
+                                        <div class="ag-timeline-card_title">15.08</div>
+                                        <div class="ag-timeline-card_desc">
+                                            Over the next two days, we called on teams. <br />
+                                            Forgot the passage of time, it felt like a wonderful dream. <br />
+                                            How could you be so sweet, my heart's so keen. <br />
+                                            So fascinated, I felt like a teen! <br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_arrow"></div>
+                            </div>
+                        </div>
+
+                        <div class="js-timeline_item ag-timeline_item">
+                            <div class="ag-timeline-card_box">
+                                <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                    <div class="ag-timeline-card_point">16.08</div>
+                                </div>
+                                <div class="ag-timeline-card_meta-box">
+                                    <div class="ag-timeline-card_meta">相爱 Affection</div>
+                                </div>
+                            </div>
+                            <div class="ag-timeline-card_item">
+                                <div class="ag-timeline-card_inner">
+                                    <div class="ag-timeline-card_img-box">
+                                        <img src="images/3.jpg"
+                                            class="ag-timeline-card_img" width="640" height="360" alt="" />
+                                    </div>
+                                    <div class="ag-timeline-card_info">
+                                        <div class="ag-timeline-card_title">Season 11</div>
+                                        <div class="ag-timeline-card_desc">
+                                            We wrote our first poems for each other <br />
+                                            <hr />
+                                            高山流水遇知音 ，人生得一知己足矣。<br />
+                                            meeting someone that understands my music and mind, my life is complete
+                                            <br />
+                                            <hr />
+                                            幸福是唯一的东西，当你分享它时，他就会翻倍。<br />
+                                            <hr />
+                                            《凯佳美德》 <br />
+                                            凯月千里伴子期， <br />
+                                            佳人海内存知己。 <br />
+                                            美丽动人花解意， <br />
+                                            德馨如兰春化雨。 <br />
+                                            <br />
+                                            "Virtuous Katja"<br />
+                                            The moon shines on my friend so far, so dear,<br />
+                                            Casting my wishes, making the distance clear.<br />
+                                            Lovely as blossoms, with thoughts so refined,<br />
+                                            Virtuous as orchids, with spring's gentle rain combined.<br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_arrow"></div>
+                            </div>
+                        </div>
+
+                        <div class="js-timeline_item ag-timeline_item">
+                            <div class="ag-timeline-card_box">
+                                <div class="ag-timeline-card_meta-box">
+                                    <div class="ag-timeline-card_meta">表白 Confession</div>
+                                </div>
+                                <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                    <div class="ag-timeline-card_point">19.08</div>
+                                </div>
+                            </div>
+                            <div class="ag-timeline-card_item">
+                                <div class="ag-timeline-card_inner">
+                                    <div class="ag-timeline-card_img-box">
+                                        <img src="images/4.jpg"
+                                            class="ag-timeline-card_img" width="640" height="360" alt="" />
+                                    </div>
+                                    <div class="ag-timeline-card_info">
+                                        <div class="ag-timeline-card_title">19.08</div>
+                                        <div class="ag-timeline-card_desc">
+                                            While wishing you a happy birthday, I sneaked in my confession 😊 <br />
+                                            <hr />
+                                            《凯佳辰喜，当明心许》<br />
+                                            凯月似水<br />
+                                            佳期如梦<br />
+                                            辰星雨过<br />
+                                            喜盼讯音<br />
+                                            当喻伊人<br />
+                                            明珠碧玉<br />
+                                            心有灵犀<br />
+                                            许愿终生<br />
+                                            <br />
+                                            "Happy birthday Katja, my heart is yours"<br />
+                                            Moonlight shines so clear,<br />
+                                            Moments like dreams draw near,<br />
+                                            After rain, stars appear,<br />
+                                            Awaiting a friend's words, I hold dear.<br />
+                                            <br />
+                                            Her grace, like jewels so rare,<br />
+                                            A bond with her, beyond compare,<br />
+                                            Quietly, a wish in the air,<br />
+                                            For her happiness, a lifetime's prayer.<br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_arrow"></div>
+                            </div>
+                        </div>
+
+                        <div class="js-timeline_item ag-timeline_item">
+                            <div class="ag-timeline-card_box">
+                                <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                    <div class="ag-timeline-card_point">22.08</div>
+                                </div>
+                                <div class="ag-timeline-card_meta-box">
+                                    <div class="ag-timeline-card_meta">七夕 Valentine</div>
+                                </div>
+                            </div>
+                            <div class="ag-timeline-card_item">
+                                <div class="ag-timeline-card_inner">
+                                    <div class="ag-timeline-card_img-box">
+                                        <img src="images/5.jpg"
+                                            class="ag-timeline-card_img" width="640" height="360" alt="" />
+                                    </div>
+                                    <div class="ag-timeline-card_info">
+                                        <div class="ag-timeline-card_title">22.08</div>
+                                        <div class="ag-timeline-card_desc">
+                                            This Chinese valentine, I'm glad I have you! <br />
+                                            A promise made under the stars, may it forever stay true. <br />
+                                            <hr />
+                                            《七夕，星空下的约定》<br />
+                                            繁星闪烁，回忆起古老传说。<br />
+                                            牛郎织女，谱写着永恒诗歌。<br />
+                                            知己难寻，相遇在偶然时刻。<br />
+                                            浩瀚银河，见证那永恒你我。<br />
+                                            琴声悠扬，星空下演奏乐曲。<br />
+                                            余音绕梁，旋律中最美是你。<br />
+                                            红袖添香，故事里我愿羁旅。<br />
+                                            荡气回肠，天地间永为伴侣。<br />
+                                            千山万水，怎抵挡衷心情意。<br />
+                                            时空相隔，难动摇我心已许。<br />
+                                            佳节七夕，赤子心跨越万里。<br />
+                                            美梦成真，终相会牛郎织女！<br />
+                                            <br />
+                                            A Promise Under the Starry Sky<br />
+                                            Stars above twinkle and glow, recalling tales from long ago.<br />
+                                            NiuLang and ZhiNü, their eternal song we know.<br />
+                                            Souls mates are rare, found in a moment's spree,<br />
+                                            The vast Milky Way, witnesses our eternity.<br />
+                                            Piano notes rise high, under stars they serenely fly.<br />
+                                            Echoes dance around, in the melody, you're the most profound.<br />
+                                            Red sleeves scent the tale, with you, I'd journey without fail.<br />
+                                            Stirring deep emotion, through time and space, an endless devotion.<br />
+                                            Through mountains vast and rivers wide, true feelings can't be denied.<br />
+                                            Time and space may part, but vows of my heart never depart.<br />
+                                            On this Qixi fest, with an earnest heart, I travel the quest.<br />
+                                            Dreams do come through, as NiuLang and ZhiNü finally rendezvous!<br />
+
+                                            <hr />
+                                            you are the fairy maiden from heaven <br />
+                                            I'm but a admirer awed by your presence <br />
+                                            may the milkyway bridge clears the distance <br />
+                                            my heart and soul to you shall be given <br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_arrow"></div>
+                            </div>
+                        </div>
+
+                        <div class="js-timeline_item ag-timeline_item">
+                            <div class="ag-timeline-card_box">
+                                <div class="ag-timeline-card_meta-box">
+                                    <div class="ag-timeline-card_meta">甜蜜 Honey</div>
+                                </div>
+                                <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                    <div class="ag-timeline-card_point">24.08</div>
+                                </div>
+                            </div>
+                            <div class="ag-timeline-card_item">
+                                <div class="ag-timeline-card_inner">
+                                    <div class="ag-timeline-card_img-box">
+                                        <img src="images/6.jpg"
+                                            class="ag-timeline-card_img" width="640" height="360" alt="" />
+                                    </div>
+                                    <div class="ag-timeline-card_info">
+                                        <div class="ag-timeline-card_title">24.08</div>
+                                        <div class="ag-timeline-card_desc">
+                                            The sweetest poem you wrote me, my heart melted like hot chocolate 😍 <br />
+                                            Oh my sweetest Katja, what did I do to deserve you! ♥️ <br />
+                                            <hr />
+                                            I learned this word today: 蜂蜜. And it remembers me at you! <br />
+                                            You’re like honey for me 😊 for my soul and my mood 😍 <br />
+                                            <hr />
+                                            Sweet surrender of finding <br />
+                                            One’s tired soul unwinding <br />
+                                            Until life no longer matters; <br />
+                                            Love unchains all its fetters. <br />
+                                            Mirrored half of each other’s mess, <br />
+                                            Aspiring always for nothing less <br />
+                                            Than to love across life’s pages, <br />
+                                            Either together or apart for ages.♥️ <br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_arrow"></div>
+                            </div>
+                        </div>
+
+                        <div class="js-timeline_item ag-timeline_item">
+                            <div class="ag-timeline-card_box">
+                                <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                    <div class="ag-timeline-card_point">25.08</div>
+                                </div>
+                                <div class="ag-timeline-card_meta-box">
+                                    <div class="ag-timeline-card_meta">春风 Breeze</div>
+                                </div>
+                            </div>
+                            <div class="ag-timeline-card_item">
+                                <div class="ag-timeline-card_inner">
+                                    <div class="ag-timeline-card_img-box">
+                                        <img src="images/7.jpg"
+                                            class="ag-timeline-card_img" width="640" height="360" alt="" />
+                                    </div>
+                                    <div class="ag-timeline-card_info">
+                                        <div class="ag-timeline-card_title">25.08</div>
+                                        <div class="ag-timeline-card_desc">
+                                            Madly in love I couldn't help but write this for you. <br />
+                                            <hr />
+                                            《致凯佳其一》 <br />
+                                            人间芳菲，春风化雨。 <br />
+                                            德馨如兰，貌美似玉。 <br />
+                                            万紫千红，绝世独立。 <br />
+                                            天生质丽，飞花解语。 <br />
+                                            <br />
+                                            "Für Katja I" <br />
+                                            Like the spring breeze, gentle and plain, <br />
+                                            Like the scent of blooms after the rain. <br />
+                                            As virtuous as an orchid's shade, <br />
+                                            As stunning as the finest jade. <br />
+                                            All the colorful flower combined, <br />
+                                            Stand out only you, so defined. <br />
+                                            The natural beauty so ravishing so true, <br />
+                                            Flower goddess herself, the most lovely you! <br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_arrow"></div>
+                            </div>
+                        </div>
+
+                        <div class="js-timeline_item ag-timeline_item">
+                            <div class="ag-timeline-card_box">
+                                <div class="ag-timeline-card_meta-box">
+                                    <div class="ag-timeline-card_meta">美梦 Dreams</div>
+                                </div>
+                                <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                    <div class="ag-timeline-card_point">26.08</div>
+                                </div>
+                            </div>
+                            <div class="ag-timeline-card_item">
+                                <div class="ag-timeline-card_inner">
+                                    <div class="ag-timeline-card_img-box">
+                                        <img src="images/8.jpg"
+                                            class="ag-timeline-card_img" width="640" height="360" alt="" />
+                                    </div>
+                                    <div class="ag-timeline-card_info">
+                                        <div class="ag-timeline-card_title">26.08</div>
+                                        <div class="ag-timeline-card_desc">
+                                            Wishing each other good night, I hope to see you in my dreamland. <br />
+                                            <hr />
+                                            明月装饰了你的窗子， <br />
+                                            你装饰了别人的梦。 <br />
+                                            The moon decorated your window, <br />
+                                            You decorated my dream. <br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_arrow"></div>
+                            </div>
+                        </div>
+
+                        <div class="js-timeline_item ag-timeline_item">
+                            <div class="ag-timeline-card_box">
+                                <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                    <div class="ag-timeline-card_point">27.08</div>
+                                </div>
+                                <div class="ag-timeline-card_meta-box">
+                                    <div class="ag-timeline-card_meta">铭刻 Imprinted</div>
+                                </div>
+                            </div>
+                            <div class="ag-timeline-card_item">
+                                <div class="ag-timeline-card_inner">
+                                    <div class="ag-timeline-card_img-box">
+                                        <img src="images/9.jpg"
+                                            class="ag-timeline-card_img" width="640" height="360" alt="" />
+                                    </div>
+                                    <div class="ag-timeline-card_info">
+                                        <div class="ag-timeline-card_title">27.08</div>
+                                        <div class="ag-timeline-card_desc">
+                                            Literally like Jacob from Twilight, I'm imprinted
+                                            <hr />
+                                            It's not like love at first sight, really. It's more like… gravity moves…
+                                            <br />
+                                            suddenly. It's not the earth holding you here anymore, she does… You become
+                                            <br />
+                                            whatever she needs you to be <br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_arrow"></div>
+                            </div>
+                        </div>
+
+                        <div class="js-timeline_item ag-timeline_item">
+                            <div class="ag-timeline-card_box">
+                                <div class="ag-timeline-card_meta-box">
+                                    <div class="ag-timeline-card_meta">幸福 Bliss</div>
+                                </div>
+                                <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                    <div class="ag-timeline-card_point">02.09</div>
+                                </div>
+                            </div>
+                            <div class="ag-timeline-card_item">
+                                <div class="ag-timeline-card_inner">
+                                    <div class="ag-timeline-card_img-box">
+                                        <img src="images/10.jpg"
+                                            class="ag-timeline-card_img" width="640" height="360" alt="" />
+                                    </div>
+                                    <div class="ag-timeline-card_info">
+                                        <div class="ag-timeline-card_title">02.09</div>
+                                        <div class="ag-timeline-card_desc">
+                                            You wrote me such a sweet poem, my heart literally melted ❤️ <br />
+                                            O' Katja, I love you with my whole life <br />
+                                            <hr />
+                                            Es ist ein Glück zu wissen, <br />
+                                            daß du bist, <br />
+                                            Von dir zu träumen <br />
+                                            hohe Wonne ist, <br />
+                                            Nach dir sich sehnen <br />
+                                            macht zum Traum die Zeit, <br />
+                                            Bei dir zu sein, <br />
+                                            ist ganze Seligkeit. <br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_arrow"></div>
+                            </div>
+                        </div>
+
+                        <div class="js-timeline_item ag-timeline_item">
+                            <div class="ag-timeline-card_box">
+                                <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                    <div class="ag-timeline-card_point">07.09</div>
+                                </div>
+                                <div class="ag-timeline-card_meta-box">
+                                    <div class="ag-timeline-card_meta">誓言 Vow</div>
+                                </div>
+                            </div>
+                            <div class="ag-timeline-card_item">
+                                <div class="ag-timeline-card_inner">
+                                    <div class="ag-timeline-card_img-box">
+                                        <img src="images/11.jpg"
+                                            class="ag-timeline-card_img" width="640" height="360" alt="" />
+                                    </div>
+                                    <div class="ag-timeline-card_info">
+                                        <div class="ag-timeline-card_title">07.09</div>
+                                        <div class="ag-timeline-card_desc">
+                                            O' Katja my love! <br />
+                                            How I wish to be with you and start a life with you now!<br />
+                                            <hr />
+                                            《誓言》<br />
+                                            携子之手，与子偕老。<br />
+                                            永结同心，百年合好。<br />
+                                            非卿不娶，视如珍宝。<br />
+                                            海枯石烂，天荒地老！<br />
+                                            <br />
+                                            "The Vow"<br />
+                                            Give me your hand my love, I'll show you forever<br />
+                                            Bonded my soul with you, our hearts belong together!<br />
+                                            I can love nobody else but you, I see you as the most beautiful
+                                            treasure.<br />
+                                            For better, for worse, to love and to cherish, from this day forward!<br />
+                                            💍👰‍♀️❤️<br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_arrow"></div>
+                            </div>
+                        </div>
+
+                        <div class="js-timeline_item ag-timeline_item">
+                            <div class="ag-timeline-card_box">
+                                <div class="ag-timeline-card_meta-box">
+                                    <div class="ag-timeline-card_meta">最美 Beauty</div>
+                                </div>
+                                <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                    <div class="ag-timeline-card_point">08.09</div>
+                                </div>
+                            </div>
+                            <div class="ag-timeline-card_item">
+                                <div class="ag-timeline-card_inner">
+                                    <div class="ag-timeline-card_img-box">
+                                        <img src="images/12.jpg"
+                                            class="ag-timeline-card_img" width="640" height="360" />
+                                    </div>
+                                    <div class="ag-timeline-card_info">
+                                        <div class="ag-timeline-card_title">08.09</div>
+                                        <div class="ag-timeline-card_desc">
+                                            You are so beautiful to me
+                                            Can't you see
+                                            You're everything I hoped for
+                                            You're everything I need
+                                            You are so beautiful to me
+                                            <hr />
+                                            《凯佳醉(最)美》<br />
+                                            凯云清风，<br />
+                                            佳偶天成。<br />
+                                            醉卧花丛，<br />
+                                            美不自胜。<br />
+                                            <br />
+                                            "Katja is the most beautiful"<br />
+                                            Amidst the clouds so fair,<br />
+                                            a perfect pair we share.<br />
+                                            In fragrant blooms we lay,<br />
+                                            lost in beauty's sway.<br />
+                                            🥰<br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_arrow"></div>
+                            </div>
+                        </div>
+
+                        <div class="js-timeline_item ag-timeline_item">
+                            <div class="ag-timeline-card_box">
+                                <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                    <div class="ag-timeline-card_point">09.09</div>
+                                </div>
+                                <div class="ag-timeline-card_meta-box">
+                                    <div class="ag-timeline-card_meta">永远 Forever</div>
+                                </div>
+                            </div>
+                            <div class="ag-timeline-card_item">
+                                <div class="ag-timeline-card_inner">
+                                    <div class="ag-timeline-card_img-box">
+                                        <img src="images/13.jpg"
+                                            class="ag-timeline-card_img" width="640" height="360" alt="" />
+                                    </div>
+                                    <div class="ag-timeline-card_info">
+                                        <div class="ag-timeline-card_title">09.09</div>
+                                        <div class="ag-timeline-card_desc">
+                                            To have you in my life, I wish to be with you forever. <br />
+                                            <hr />
+                                            《一生有你，愿许终身》—— 致凯佳 <br />
+                                            一眼万年逢知己， <br />
+                                            生而为卿喜相遇。 <br />
+                                            有崖天地无尽情， <br />
+                                            你我今生天注定。 <br />
+                                            愿有岁月可回首， <br />
+                                            许卿终身共白头。 <br />
+                                            终有鹊桥七夕会， <br />
+                                            身如彩凤比翼飞。 <br />
+                                            <br />
+                                            With you in my life, I vow to spend a lifetime —— Für Katja <br />
+                                            In one glance, a bond for eternity found, <br />
+                                            Destined to find you, the happiness profound. <br />
+                                            The world has its limits, yet our love unbound. <br />
+                                            Universe brought you, it's fate, so astounded. <br />
+                                            May the years we look back with glee, <br />
+                                            Promise to be with you for eternity. <br />
+                                            At the rainbow's end we will meet, <br />
+                                            Like colorful phoenixes, our hearts will beat in harmony, our fate complete.
+                                            <br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_arrow"></div>
+                            </div>
+                        </div>
+
+                        <div class="js-timeline_item ag-timeline_item">
+                            <div class="ag-timeline-card_box">
+                                <div class="ag-timeline-card_meta-box">
+                                    <div class="ag-timeline-card_meta">终身 Lifetime</div>
+                                </div>
+                                <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                    <div class="ag-timeline-card_point">10.09</div>
+                                </div>
+                            </div>
+                            <div class="ag-timeline-card_item">
+                                <div class="ag-timeline-card_inner">
+                                    <div class="ag-timeline-card_img-box">
+                                        <img src="images/14.jpg"
+                                            class="ag-timeline-card_img" width="640" height="360" />
+                                    </div>
+                                    <div class="ag-timeline-card_info">
+                                        <div class="ag-timeline-card_title">09.09</div>
+                                        <div class="ag-timeline-card_desc">
+                                            O' Katja, my words pales in front of you. <br />
+                                            I can't love you enough <br />
+                                            I promise to care for you my entire lifetime <br />
+                                            <hr />
+                                            《终生为你》 <br />
+                                            既许一人以偏爱， <br />
+                                            愿尽余生之慷慨。 <br />
+                                            只缘感卿一回顾， <br />
+                                            使我思君朝与暮。 <br />
+                                            <br />
+                                            "To dedicate you my lifetime" <br />
+                                            Vowed to forever be your side. <br />
+                                            Repay your generosity with my life. <br />
+                                            With just one glance, your presence such delight. <br />
+                                            Thoughts of you, every heart beat, day and night. <br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_arrow">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="js-timeline_item ag-timeline_item">
+                            <div class="ag-timeline-card_box">
+                                <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                    <div class="ag-timeline-card_point">09.12</div>
+                                </div>
+                                <div class="ag-timeline-card_meta-box">
+                                    <div class="ag-timeline-card_meta">港湾 Harbour</div>
+                                </div>
+                            </div>
+                            <div class="ag-timeline-card_item">
+                                <div class="ag-timeline-card_inner">
+                                    <div class="ag-timeline-card_img-box">
+                                        <img src="images/15.jpg"
+                                            class="ag-timeline-card_img" width="640" height="360" alt="" />
+                                    </div>
+                                    <div class="ag-timeline-card_info">
+                                        <div class="ag-timeline-card_title">12.09</div>
+                                        <div class="ag-timeline-card_desc">
+                                            No matter how difficult it is, I will always be your harbour.
+                                            To welcome you home with an open arm, I'll be here for you forever. <br />
+                                            <hr />
+                                            《老婆幸苦老公爱你》 <br />
+                                            老天不负苦心人， <br />
+                                            婆娑树晚秋风临。 <br />
+                                            辛有佳人心相印， <br />
+                                            苦尽甘来盼星辰。 <br />
+                                            老骥伏枥赤子心， <br />
+                                            公无不克可铄金。 <br />
+                                            爱卿胜己付终身， <br />
+                                            你我情深泣鬼神! <br />
+                                            <br />
+                                            "Wife you've worked hard, hubby loves you" <br />
+                                            The heavens favor those who works hard, <br />
+                                            Like autumn trees, dancing in the chilly dark. <br />
+                                            Lucky to have you dear, you warm up my heart, <br />
+                                            I pray in dreams, a life together we will start. <br />
+                                            Time marches on, but my heart's still young, <br />
+                                            My passion, a fire, can melt anything strong. <br />
+                                            You mean more to me than words ever sung, <br />
+                                            Moving god to tears, our love so profound! <br />
+                                            <br />
+                                            <hr />
+                                            《许终身》 <br />
+                                            山有木兮心悦君， <br />
+                                            白首愿得一人心。 <br />
+                                            海枯石烂无穷尽， <br />
+                                            举案齐眉敬如宾。 <br />
+                                            <br />
+                                            "My life for you" <br />
+                                            Like trees in mountains, you in my mind so delight. <br />
+                                            My heart for you, my soul and my life. <br />
+                                            Although rocks may crumble, seas may dry. <br />
+                                            Our love always fresh, a good life we strive. <br />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_arrow"></div>
+                            </div>
+                        </div>
+
+                        <div class="js-timeline_item ag-timeline_item">
+                            <div class="ag-timeline-card_box">
+                                <div class="ag-timeline-card_meta-box">
+                                    <div class="ag-timeline-card_meta">纪念 Anniversary</div>
+                                </div>
+                                <div class="js-timeline-card_point-box ag-timeline-card_point-box">
+                                    <div class="ag-timeline-card_point">13.09</div>
+                                </div>
+                            </div>
+                            <div class="ag-timeline-card_item">
+                                <div class="ag-timeline-card_inner">
+                                    <div class="ag-timeline-card_img-box">
+                                        <img src="images/16.jpg"
+                                            class="ag-timeline-card_img" width="640" height="360" />
+                                    </div>
+                                    <div class="ag-timeline-card_info">
+                                        <div class="ag-timeline-card_title">13.09</div>
+                                        <div class="ag-timeline-card_desc">
+                                            Can't believe it's been a month since we first messaged. <br />
+                                            It's the most amazing 30 days of my entire life. <br />
+                                            I can't wait to meet you and sing you lullabies in person. <br />
+                                            We will build a wondeful life together. <br />
+                                            <hr />
+                                            <iframe style="border-radius:12px"
+                                                src="https://open.spotify.com/embed/playlist/2KzCqjJFCyv4BtgkAoiwvy?utm_source=generator&theme=0"
+                                                width="100%" height="352" frameBorder="0" allowfullscreen=""
+                                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                                loading="lazy"></iframe>
+                                            <hr />
+                                            A rainy day and you’re sitting next to the window and
+                                            watching the rain <br />
+                                            A walk on a peaceful path home after a long day <br />
+                                            A couple who spends a wonderful day together and how they look at each other
+                                            <br />
+                                            No matter what we heard from the music, <br />
+                                            We'll soon be in each other's arms and listening to them together<br />
+                                            <hr />
+                                            <iframe style="border-radius:12px"
+                                                src="https://open.spotify.com/embed/playlist/6iMr45tsrBrza4xb2g7Q6Q?utm_source=generator&theme=0"
+                                                width="100%" height="352" frameBorder="0" allowfullscreen=""
+                                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                                                loading="lazy"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ag-timeline-card_arrow">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script>
+        (function ($) {
+            $(function () {
+                $(window).on('scroll', function () {
+                    fnOnScroll();
+                });
+
+                $(window).on('resize', function () {
+                    fnOnResize();
+                });
+
+
+                var agTimeline = $('.js-timeline'),
+                    agTimelineLine = $('.js-timeline_line'),
+                    agTimelineLineProgress = $('.js-timeline_line-progress'),
+                    agTimelinePoint = $('.js-timeline-card_point-box'),
+                    agTimelineItem = $('.js-timeline_item'),
+                    agOuterHeight = $(window).outerHeight(),
+                    agHeight = $(window).height(),
+                    f = -1,
+                    agFlag = false;
+
+                function fnOnScroll() {
+                    agPosY = $(window).scrollTop();
+
+                    fnUpdateFrame();
+                }
+
+                function fnOnResize() {
+                    agPosY = $(window).scrollTop();
+                    agHeight = $(window).height();
+
+                    fnUpdateFrame();
+                }
+
+                function fnUpdateWindow() {
+                    agFlag = false;
+
+                    agTimelineLine.css({
+                        top: agTimelineItem.first().find(agTimelinePoint).offset().top - agTimelineItem.first().offset().top,
+                        bottom: agTimeline.offset().top + agTimeline.outerHeight() - agTimelineItem.last().find(agTimelinePoint).offset().top
+                    });
+
+                    f !== agPosY && (f = agPosY, agHeight, fnUpdateProgress());
+                }
+
+                function fnUpdateProgress() {
+                    var agTop = agTimelineItem.last().find(agTimelinePoint).offset().top;
+
+                    i = agTop + agPosY - $(window).scrollTop();
+                    a = agTimelineLineProgress.offset().top + agPosY - $(window).scrollTop();
+                    n = agPosY - a + agOuterHeight / 2;
+                    i <= agPosY + agOuterHeight / 2 && (n = i - a);
+                    agTimelineLineProgress.css({ height: n + "px" });
+
+                    agTimelineItem.each(function () {
+                        var agTop = $(this).find(agTimelinePoint).offset().top;
+
+                        (agTop + agPosY - $(window).scrollTop()) < agPosY + .5 * agOuterHeight ? $(this).addClass('js-ag-active') : $(this).removeClass('js-ag-active');
+                    })
+                }
+
+                function fnUpdateFrame() {
+                    agFlag || requestAnimationFrame(fnUpdateWindow);
+                    agFlag = true;
+                }
+
+
+                var aud = $("#playpause audio");
+                var isPlaying = true;
+                aud.trigger("play");
+
+                window.playPause = () => {
+                    if (isPlaying) {
+                        aud.trigger("play")
+                    } else {
+                        aud.trigger("pause")
+                    }
+                    isPlaying = !isPlaying;
+                }
+            });
+        })(jQuery);
+    </script>
 </body>
 
 </html>
