@@ -1024,5 +1024,222 @@
         ],
         "img": "52.jpg",
         "index": 51
+    },
+    {
+        "date": "07.10.23",
+        "title": "朋友 Friend",
+        "titleColor": "white",
+        "content": [
+            {
+                "top": 35,
+                "fontSize": 16,
+                "text": "《朋来远方，不亦悦乎》\n朋友重聚额外亲，来日方长若比邻\n远行旅人今相会，方解千愁郁于心\n不惧旅途劳此身，亦是人生妙谛真\n悦己之卿难再得，乎倏已是又一晨",
+                "color": "white"
+            },
+            {
+                "top": 200,
+                "fontSize": 10,
+                "text": "\"Is it not a joy to have friends come from afar?\"\nA reunion with a friend, our bond now shining bright,\nThe path ahead, though lengthy, feels like it's within sight.\nTraveler journeyed far to be here today,\nAll my sorrows and worries have now faded away.\n\nMy friend, a traveler, ventured near without dismay,\nTrue friendship, in our hearts, forever here to stay.\nA trusted confidant, a gem so rare to find,\nTime slipped away, and once more, it's morning, so kind.",
+                "color": "white"
+            }
+        ],
+        "img": "53.jpg",
+        "index": 52
+    },
+    {
+        "date": "08.10.23",
+        "title": "流星 Meteor",
+        "titleColor": "white",
+        "qr": "https://spotify.link/iVpSSFdbYDb",
+        "content": [
+            {
+                "top": 35,
+                "fontSize": 9.5,
+                "text": "温柔的星空 应该让你感动\nThe loving starry sky should make you feel touched. \n我在你身后 为你布置一片天空\nI'm here by your side, decorating a piece of heaven for you.\n不准你难过 替你摆平寂寞\nI wouldn't allow you to feel sad, I'll chase away your loneliness. \n梦想的重量 全部都交给我\nThe weight of your unfufilled dreams, let me bear them all.\n牵你手 跟著我走 风再大又怎样\nLeading you by the hand. Doesn't matter how strong the wind becomes. \n你有了我 再也不会迷路方向\nFor you have me now, you'll never lose your way again.\n陪你去看流星雨落在这地球上\nWatching the meteor rain fall onto Earth with you. \n让你的泪落在我肩膀\nLetting your tears fall on my shoulder.\n要你相信我的爱只肯为你勇敢\nI want you to believe my love will brave everything solely for you.\n你会看见幸福的所在\nAnd I'll show you where Happiness lies.",
+                "color": "white"
+            }
+        ],
+        "img": "54.jpg",
+        "index": 53
+    },
+    {
+        "date": "08.10.23",
+        "title": "许愿 Wishes",
+        "titleColor": "white",
+        "content": [
+            {
+                "top": 35,
+                "fontSize": 16,
+                "text": "《流星许愿，天赐良缘》\n流光易逝惜华年，星汉灿烂伴吾眠\n许诺良偶一生恋，愿付此身终生献\n天生质雅气如兰，赐福佳人感苍天\n良辰美景共游览，缘定今生永不变",
+                "color": "white"
+            },
+            {
+                "top": 200,
+                "fontSize": 10,
+                "text": "\"Wish upon a shooting star, may heaven bless our love\"\nTime marches on, it waits for none, it's true,\nBeneath the starry night, your message, like a tune.\nI pledge my life, my love so true,\nTo spend my days with you, in skies so blue.\n\nGraceful as a flower, an orchid in the view,\nI thank the heavens, for gifting me with you.\nTogether, we'll explore, the world so wide and new,\nFate's hand has bound us, our love forever, it grew. \n",
+                "color": "white"
+            }
+        ],
+        "img": "55.jpg",
+        "index": 54
+    },
+    {
+        "date": "09.10.23",
+        "title": "情诗 Lovepoem",
+        "titleColor": "white",
+        "qr": "https://youtu.be/b2UwH0X9iJo",
+        "content": [
+            {
+                "top": 45,
+                "fontSize": 12,
+                "textAlign": "left",
+                "text": "Ich denke dein, wenn mir der Sonne Schimmer\nVom Meere strahlt;\nIch denke dein, wenn sich des Mondes Flimmer\nIn Quellen malt.\nIch sehe dich, wenn auf dem fernen Wege\nDer Staub sich hebt;\nIn tiefer Nacht, wenn auf dem schmalen Stege\nDer Wandrer bebt.\nIch höre dich, wenn dort mit dumpfem Rauschen\nDie Welle steigt.\nIm stillen Haine geh ich oft zu lauschen,\nWenn alles schweigt.\nIch bin bei dir, du seist auch noch so ferne,\nDu bist mir nah!\nDie Sonne sinkt, bald leuchten mir die Sterne.\nO wärst du da!",
+                "color": "white"
+            }
+        ],
+        "img": "56.jpg",
+        "index": 55
+    },
+    {
+        "date": "09.10.23",
+        "title": "心动 Takenheart",
+        "titleColor": "white",
+        "qr": "https://spotify.link/SDYUH6lcYDb",
+        "content": [
+            {
+                "top": 35,
+                "fontSize": 13,
+                "text": "Staring at the moon so blue\nTurning all my thoughts to you\nI was without hopes or dreams\nTry to dull an inner scream\nBut you saw me through\nWalking on a path of air\nSee your faces everywhere\nAs you melt this heart of stone\nYou take my hand to guide me home\nAnd now I'm in love\nYou took my heart away\nWhen my whole world was grey\nYou gave me everything\nAnd a little bit more\nAnd when it's cold at night\nAnd you sleep by my side\nYou become the meaning of my life",
+                "color": "white"
+            }
+        ],
+        "img": "57.jpg",
+        "index": 56
+    },
+    {
+        "date": "10.10.23",
+        "title": "完美 Perfect",
+        "titleColor": "white",
+        "content": [
+            {
+                "top": 35,
+                "fontSize": 22,
+                "text": "《十全美人》\n十里春风不如你\n全心为卿胜爱己\n美丽动人花解语\n人得知音何心喜",
+                "color": "white"
+            },
+            {
+                "top": 250,
+                "fontSize": 12,
+                "text": "\"The perfect girl\"\nTen miles of spring breeze, no match for you,\nWhole-heartedly for you, more than I ever knew.\nAs beautiful and bright as flowers in bloom,\nA soul mate found, my heart's happy tune! ",
+                "color": "white"
+            }
+        ],
+        "img": "58.jpg",
+        "index": 57
+    },
+    {
+        "date": "11.10.23",
+        "title": "永爱 Foreverlove",
+        "titleColor": "white",
+        "content": [
+            {
+                "top": 35,
+                "fontSize": 22,
+                "text": "《永远爱你》\n永世不渝比金坚\n远在天涯心无间\n爱深似海情如山\n你若安好便晴天",
+                "color": "white"
+            },
+            {
+                "top": 200,
+                "fontSize": 12,
+                "text": "\"Love You Forever\"\nBaby, this love strong than gold,\nforever I'll keep.\nThough miles in between,\nour hearts unite in a dream.\nAs unwavering as mountain high,\nas profound as ocean deep.\nAs long as you are in my heart,\neveryday is a bliss!",
+                "color": "white"
+            }
+        ],
+        "img": "59.jpg",
+        "index": 58
+    },
+    {
+        "date": "12.10.23",
+        "title": "鹊桥 Magpie",
+        "titleColor": "white",
+        "content": [
+            {
+                "top": 35,
+                "fontSize": 15,
+                "text": "《鹊桥仙·凯佳当明》\n凯云清风，佳偶天成，万里锦书传情。\n夜夜思卿望相逢，只期盼玉露金风。\n当赏花丛，明月繁星，百首情诗隽永。\n两情相悦心相通，又怎需朝暮陪同。",
+                "color": "white"
+            },
+            {
+                "top": 160,
+                "fontSize": 10,
+                "text": "\"Fairy of the Magpie Bridge: Katja and John\"\nAmidst the clouds so bright, \na love so pure, our guiding light,\nA letter sails through endless miles, \nmy feelings it unveils.\nEach night, my thoughts of you ignite, \na rendezvous in the moonlight.\nBeneath the starry night, \nour love takes flight, in a garden of delight.\nA hundred verses I shall write, \nwhere love's flame burns so bright;\nOur love will last for life, \neven if we are not together yet, day and night.",
+                "color": "white"
+            }
+        ],
+        "img": "60.jpg",
+        "index": 59
+    },
+    {
+        "date": "13.10.23",
+        "title": "彩蝶 Butterfly",
+        "titleColor": "white",
+        "content": [
+            {
+                "top": 35,
+                "fontSize": 13,
+                "text": "《蝶恋花·午夜抒怀》\n月光云影人尚觉，凄凉永夜，叹蹉跎岁月。\n似水芳心何人解，郁如心石难磨灭。\n忽如春风释冰雪，佳人卓绝，似云宫仙乐。\n如火激情燃热血，千山万水终穿越！",
+                "color": "white"
+            },
+            {
+                "top": 160,
+                "fontSize": 10,
+                "text": "\"Butterfly in Love with the Flower: \nSong from the midnight\"\nMoonlight shines bright, clouds is in the sky,\nI am awake so widely, in the cold night,\ntowards the lost years I sigh.\nMy romance so gentle like water, but lost in cruel time,\ndepression so heavy like stone, hard to let it die.\n\nAll of a sudden, like the spring wind melted the ice,\nyou are my perfect bride, like music from heavens,\nso beautiful so bright!\nmy passion never been stronger like fire you reignite,\nThousands of mountains I'll climb, just to be at your side!",
+                "color": "white"
+            }
+        ],
+        "img": "61.jpg",
+        "index": 60
+    },
+    {
+        "date": "15.10.23",
+        "title": "深情 Deeplove",
+        "titleColor": "white",
+        "content": [
+            {
+                "top": 35,
+                "fontSize": 16,
+                "text": "《两相不厌，一往情深》\n两情相悦心相通，相见指日盼相逢\n不畏星夜坎坷路，厌倦日暮独孤行\n一如冰雪化春风，往事皆虚唯爱同\n情托万里寄尺素，深海高天证此盟",
+                "color": "white"
+            },
+            {
+                "top": 200,
+                "fontSize": 11,
+                "text": "\"Never be weary, Forever deep love\"\nOur love so pure, the feelings so right,\nTo be in your embrace soon, I pray to the sky;\nUnafraid of the bumpy road at the starry night,\nTired of walking alone under the moonlight;\nLike spring's breeze that melts the snow so bright,\nThe past, it matters not, in love's warm light;\nTo send my love, across miles it flies,\nWitnessed by mountains, and seas' endless cries.",
+                "color": "white"
+            }
+        ],
+        "img": "62.jpg",
+        "index": 61
+    },
+    {
+        "date": "17.10.23",
+        "title": "秋夜 Fallnight",
+        "titleColor": "white",
+        "content": [
+            {
+                "top": 55,
+                "fontSize": 13,
+                "text": "《临江仙·秋夜致凯佳》\n春华已逝逐秋水，又逢鸿雁南飞。\n光阴似箭晨熹微，夙兴夜寐，只为你相陪。\n少年未老佳人美，恰似寸草春晖。\n天赐良缘地做媒，浅梦如醉，永与卿依偎。",
+                "color": "white"
+            },
+            {
+                "top": 200,
+                "fontSize": 11,
+                "text": "\"The Fairy by the River·Autumn Song for Katja\"\nThe spring is crarried away by the autumn stream, \nThe birds travelling south, following the sun's gleam.\nTime flies fast, I'm still wide awake,\njust to be in your dream.\nSpring may have gone, we are still young and free.\nLike the spring sun nurishes my soul, your beauty.\nUniverse brought us close,\nin your arms forever I will be!",
+                "color": "white"
+            }
+        ],
+        "img": "63.jpg",
+        "index": 62
     }
 ]
